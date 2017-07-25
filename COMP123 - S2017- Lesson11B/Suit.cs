@@ -8,16 +8,17 @@ using System.Threading.Tasks;
  * Name: Lyrica Yoshida
  * ID: 300923951
  * Date: July 25, 2017
- * Description: This is a demo for Lesson 11
- * Version: 0.1 - Created the Project
+ * Description: This is the Suit enum
+ * Version: 0.1 - Created the Suit enum
  */
 
 namespace COMP123___S2017__Lesson11B
 {
-    class Program
+    public enum Suit
     {
-        static void Main(string[] args)
-        {
-        }
+        Clubs,
+        Diamonds,
+        Hearts,
+        Spades
     }
 }
