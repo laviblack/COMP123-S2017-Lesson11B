@@ -9,7 +9,7 @@ using System.Threading.Tasks;
  * ID: 300923951
  * Date: July 25, 2017
  * Description: This is a demo for Lesson 11
- * Version: 0.1 - Created the Project
+ * Version: 0.2 - Implemented the Deck class
  */
 
 namespace COMP123___S2017__Lesson11B
@@ -18,6 +18,8 @@ namespace COMP123___S2017__Lesson11B
     {
         static void Main(string[] args)
         {
+            Deck deck = new Deck();
+            Console.WriteLine(deck.ToString());
         }
     }
 }

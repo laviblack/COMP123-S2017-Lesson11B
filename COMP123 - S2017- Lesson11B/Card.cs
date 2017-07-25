@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace COMP123___S2017__Lesson11B
 {
-    class Card
+    public class Card
     {
         // PRIVATE INSTANCE VARIABLES
         private Face _face;
