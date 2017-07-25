@@ -9,7 +9,7 @@ using System.Threading.Tasks;
  * ID: 300923951
  * Date: July 25, 2017
  * Description: This is a demo for Lesson 11
- * Version: 0.2 - Implemented the Deck class
+ * Version: 0.3 - Tested the Shuffle method of the Deck class
  */
 
 namespace COMP123___S2017__Lesson11B
@@ -19,6 +19,13 @@ namespace COMP123___S2017__Lesson11B
         static void Main(string[] args)
         {
             Deck deck = new Deck();
+            Console.WriteLine("Original Deck");
+            Console.WriteLine("--------------");
+            Console.WriteLine(deck.ToString());
+            Console.WriteLine();
+            deck.Shuffle();
+            Console.WriteLine("Shuffled Deck");
+            Console.WriteLine("--------------");
             Console.WriteLine(deck.ToString());
         }
     }

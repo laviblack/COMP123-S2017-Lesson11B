@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Date: July 25, 2017
  * Description: This is the Deck class
  * It inherits from List generic type and uses Card as the base type
- * Version: 0.1 - Created the Deck class
+ * Version: 0.2 - Added the Shuffle method
  */
 
 namespace COMP123___S2017__Lesson11B
@@ -18,6 +18,16 @@ namespace COMP123___S2017__Lesson11B
     public class Deck : List<Card>
     {
         // PRIVATE INSTANCE VARIABLES
+        private Random _random;
+
+        // PRIVATE PROPERTIES
+        private Random Random
+        {
+            get
+            {
+                return this._random;
+            }
+        }
 
         // PUBLIC PROPERTIES
 
@@ -39,6 +49,10 @@ namespace COMP123___S2017__Lesson11B
         /// </summary>
         private void _initialize()
         {
+            // initialize the random number generator
+            this._random = new Random();
+
+            // This builts a deck
             for(int suit = (int)Suit.Clubs; suit <= (int)Suit.Spades; suit++)
             {
                 for(int face = (int)Face.Ace; face <= (int)Face.King; face++)
@@ -66,5 +80,28 @@ namespace COMP123___S2017__Lesson11B
             return output;
         }
 
+        /// <summary>
+        /// This method shuffles the deck by using random indices to select two cards at a time
+        /// It uses a Fisher-Yates like algorithm
+        /// </summary>
+        public void Shuffle()
+        {
+            int firstCard;
+            int secondCard;
+            Card tempCard;
+
+
+            for (int card = 0; card < this.Count; card++)
+            {
+                firstCard = this.Random.Next(0, 52);
+                secondCard = this.Random.Next(0, 52);
+
+                tempCard = (Card)this[secondCard].Clone();
+                this[secondCard].Face = this[firstCard].Face;
+                this[secondCard].Suit = this[firstCard].Suit;
+                this[firstCard].Face = tempCard.Face;
+                this[firstCard].Suit = tempCard.Suit;
+            }
+        }
     }
 }
