@@ -19,21 +19,29 @@ namespace COMP123___S2017__Lesson11B
         static void Main(string[] args)
         {
             Deck deck = new Deck();
-            Hand hand = new Hand();
+            //Hand hand = new Hand();
             Console.WriteLine(deck.ToString());
             Console.WriteLine();
             deck.Shuffle();
             Console.WriteLine("Shuffled");
             Console.WriteLine(deck.ToString());
 
-            hand.Add(deck.Deal1());
-            Console.WriteLine(hand.ToString());
-            Console.WriteLine();
-            hand.Add(deck.Deal1());
+            //hand.Add(deck.Deal1());
+            //Console.WriteLine(hand.ToString());
+            //Console.WriteLine();
+            //hand.Add(deck.Deal1());
+            //Console.WriteLine(hand.ToString());
+
+            //Console.WriteLine();
+            //Console.WriteLine(deck.ToString());
+
+            Hand hand = deck.Deal5();
             Console.WriteLine(hand.ToString());
 
             Console.WriteLine();
             Console.WriteLine(deck.ToString());
+
+            hand.HighestCards();
         }
     }
 }

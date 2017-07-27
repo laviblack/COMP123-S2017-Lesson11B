@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Date: July 25, 2017
  * Description: This is the Deck class
  * It inherits from the CardList abstract class
- * Version: 0.6 - Added the Deal1 method
+ * Version: 0.7 - Implemented the ToString method of the Card class
  */
 
 namespace COMP123___S2017__Lesson11B
@@ -71,7 +71,7 @@ namespace COMP123___S2017__Lesson11B
 
             foreach(Card card in this)
             {
-                output += "The " + card.Face + " of " + card.Suit + "\n";
+                output += card.ToString() + "\n";
             }
             return output;
         }

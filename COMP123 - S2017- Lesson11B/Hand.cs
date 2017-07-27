@@ -47,7 +47,7 @@ namespace COMP123___S2017__Lesson11B
 
             foreach (Card card in this)
             {
-                output += "The " + card.Face + " of " + card.Suit + "\n";
+                output += card.ToString() + "\n";
             }
             return output;
         }
@@ -58,7 +58,7 @@ namespace COMP123___S2017__Lesson11B
                 from card in this
                 orderby card.Face
                 select card;
-            Console.WriteLine("The highest card in the hand is: " + sorted.Last());
+            Console.WriteLine("The highest card in the hand is: " + sorted.Last().ToString());
         }
     }
 }

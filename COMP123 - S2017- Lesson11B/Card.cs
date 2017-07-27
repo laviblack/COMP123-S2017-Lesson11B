@@ -9,7 +9,7 @@ using System.Threading.Tasks;
  * ID: 300923951
  * Date: July 25, 2017
  * Description: This is the Card class
- * Version: 0.2 - Implemented the IClonable interface
+ * Version: 0.3 - Added the overriden Tostring method
  */
 
 namespace COMP123___S2017__Lesson11B
@@ -71,6 +71,17 @@ namespace COMP123___S2017__Lesson11B
         public object Clone()
         {
             return new Card(this.Face, this.Suit); 
+        }
+
+        /// <summary>
+        /// This method overrides the built-in ToString method
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            string output = "";
+            output += "The " + this.Face + " of " + this.Suit;
+            return output;
         }
     }
 }
