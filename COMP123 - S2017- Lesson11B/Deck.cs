@@ -9,13 +9,13 @@ using System.Threading.Tasks;
  * ID: 300923951
  * Date: July 25, 2017
  * Description: This is the Deck class
- * It inherits from List generic type and uses Card as the base type
- * Version: 0.3 - Refactored the Shuffle method
+ * It inherits from the CardList abstract class
+ * Version: 0.4 - Refactored to extend the CardList abstract class
  */
 
 namespace COMP123___S2017__Lesson11B
 {
-    public class Deck : List<Card>
+    public class Deck : CardList
     {
         // PRIVATE INSTANCE VARIABLES
         private Random _random;
@@ -31,15 +31,7 @@ namespace COMP123___S2017__Lesson11B
 
         // PUBLIC PROPERTIES
 
-        // CONSTRUCTORS
-
-        /// <summary>
-        /// This is the main constructor
-        /// </summary>
-        public Deck()
-        {
-            this._initialize();
-        }
+        // CONSTRUCTOR
 
         // PRIVATE METHODS
         
@@ -47,7 +39,7 @@ namespace COMP123___S2017__Lesson11B
         /// This is the Initialize method it sets values for private variables
         /// and public properties as well as other class objects.
         /// </summary>
-        private void _initialize()
+        protected override void _initialize()
         {
             // initialize the random number generator
             this._random = new Random();
