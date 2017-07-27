@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Date: July 27, 2017
  * Description: This is the Hand class
  * It inherits from the CardList Abstract class
- * Version: 0.2 - Fixed the access level 
+ * Version: 0.3 - Added the HighestCards method
  */
 
 namespace COMP123___S2017__Lesson11B
@@ -50,6 +50,15 @@ namespace COMP123___S2017__Lesson11B
                 output += "The " + card.Face + " of " + card.Suit + "\n";
             }
             return output;
+        }
+
+        public void HighestCards()
+        {
+            var sorted =
+                from card in this
+                orderby card.Face
+                select card;
+            Console.WriteLine("The highest card in the hand is: " + sorted.Last());
         }
     }
 }
