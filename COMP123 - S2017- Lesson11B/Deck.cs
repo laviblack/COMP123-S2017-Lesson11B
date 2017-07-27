@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Date: July 25, 2017
  * Description: This is the Deck class
  * It inherits from List generic type and uses Card as the base type
- * Version: 0.2 - Added the Shuffle method
+ * Version: 0.3 - Refactored the Shuffle method
  */
 
 namespace COMP123___S2017__Lesson11B
@@ -93,8 +93,8 @@ namespace COMP123___S2017__Lesson11B
 
             for (int card = 0; card < this.Count; card++)
             {
-                firstCard = this.Random.Next(0, 52);
-                secondCard = this.Random.Next(0, 52);
+                firstCard = this.Random.Next(0, this.Count);
+                secondCard = this.Random.Next(0, this.Count);
 
                 tempCard = (Card)this[secondCard].Clone();
                 this[secondCard].Face = this[firstCard].Face;
