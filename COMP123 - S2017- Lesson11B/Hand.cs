@@ -10,12 +10,12 @@ using System.Threading.Tasks;
  * Date: July 27, 2017
  * Description: This is the Hand class
  * It inherits from the CardList Abstract class
- * Version: 0.1 - Created the Hand class
+ * Version: 0.2 - Fixed the access level 
  */
 
 namespace COMP123___S2017__Lesson11B
 {
-    class Hand : CardList
+    public class Hand : CardList
     {
         // PRIVATE INSTANCE VARIABLES
 

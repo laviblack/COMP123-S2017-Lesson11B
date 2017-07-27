@@ -113,5 +113,19 @@ namespace COMP123___S2017__Lesson11B
 
             return topCard;
         }
+
+        /// <summary>
+        /// This method deal top 5 cards from the deck
+        /// and returns a hand contains these cards
+        /// </summary>
+        public Hand Deal5()
+        {
+            Hand hand = new Hand();
+            for(int i =0;i<5;i++)
+            {
+                hand.Add(Deal1());
+            }
+            return hand;
+        }
     }
 }
