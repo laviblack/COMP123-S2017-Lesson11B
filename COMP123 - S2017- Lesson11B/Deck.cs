@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Date: July 25, 2017
  * Description: This is the Deck class
  * It inherits from the CardList abstract class
- * Version: 0.4 - Refactored to extend the CardList abstract class
+ * Version: 0.5 - Refactored the ToString method to include a header
  */
 
 namespace COMP123___S2017__Lesson11B
@@ -65,6 +65,10 @@ namespace COMP123___S2017__Lesson11B
         public override string ToString()
         {
             string output = "";
+
+            output += "Deck Constains  Number of Cards: " + this.Count + "\n";
+            output += "=====================================\n";
+
             foreach(Card card in this)
             {
                 output += "The " + card.Face + " of " + card.Suit + "\n";
