@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Date: July 25, 2017
  * Description: This is the Deck class
  * It inherits from the CardList abstract class
- * Version: 0.5 - Refactored the ToString method to include a header
+ * Version: 0.6 - Added the Deal1 method
  */
 
 namespace COMP123___S2017__Lesson11B
@@ -98,6 +98,20 @@ namespace COMP123___S2017__Lesson11B
                 this[firstCard].Face = tempCard.Face;
                 this[firstCard].Suit = tempCard.Suit;
             }
+        }
+
+        /// <summary>
+        /// This method returns the top card of the deck
+        /// </summary>
+        public Card Deal1()
+        {
+            Card topCard = this[0];
+            this.RemoveAt(0); // this removes the top card from the deck
+
+            // for testing / debugging only
+            Console.WriteLine("Dealt 1 card - Size of Deck: " + this.Count);
+
+            return topCard;
         }
     }
 }
